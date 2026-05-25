@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background: #0a2a43;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.navbar li {
+    padding: 15px 25px;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar li:last-child {
+    border-right: none;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Hover Effect */
+
+.navbar li:active {
+    background: black;
+}
+
+.navbar a:hover{
+    color:#ffb703;
+}
+
+/* Section */
+.courses {
+    padding: 40px;
+}
+
+.courses h2 {
+    color: #d35400;
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+.courses h1 {
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+/* Cards */
+.card-container {
+    display: flex;
+    
+}
+
+.card {
+    background: #eaf4fb;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 400px;
+    transition: 0.3s;
+    margin-left: 50px;
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    color: #0a2a43;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.card-content a {
+    text-decoration: none;
+    color: #007bff;
+    margin-left: 65%;
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card-content a:hover{
+      background:#ffb703;
+      border-radius: 10px;
+      padding: 5px;
+    }
+/* Media Query */
+
+/*Desktop*/
+@media (min-width: 901px) {
+    .card-container{
+        flex-direction: row;
+    }
+    .card{
+        flex: 1;
+    }
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 900px){
+    .card-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card{
+        flex: 1 1 35%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+     .card-container {
+        flex-direction: column;
+    }
+}
